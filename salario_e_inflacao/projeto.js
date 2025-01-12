@@ -75,7 +75,7 @@ switch(numero){
                 let ipcaST = "Inflação: ";
 
                 console.log("\n"+ anoST.padEnd(25, '.') + " " + anoIF);
-                console.log(ipcaST.padEnd(25, '.') + " " + ipca +"%");
+                console.log(ipcaST.padEnd(25, '.') + " " + ipca.toFixed(2).replace(".",",") +" %");
              };
      break
 
