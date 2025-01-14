@@ -55,7 +55,7 @@ switch(numero){
                 let sal = salarioMinimo[i].salario;
 
                 let ano = "Ano: ";
-                let salario = "Salário mínimo: "
+                let salario = "Salário mínimo: ";
 
                 console.log("\n"+ ano.padEnd(25, '.') + " " + data);
                 console.log(salario.padEnd(25, '.') + " R$" + sal.toFixed(2).replace(".",","));
@@ -80,8 +80,24 @@ switch(numero){
      break
 
      case '3':
+              
+              let sl2 = salarioMinimo.length;
+              
+              for(let i = 0; i < sl2; i++){
+                let ano = salarioMinimo[i].ano;
+                let salario = salarioMinimo[i].salario;
+                let ipca = inflacao[i].ipca;
 
-     console.log("\nOpção escolhida: 3\n");
+                let data = "Ano: ";
+                let sal = "Salário mínimo: ";
+                let ipcaST = "Inflação: ";
+
+
+                console.log("\n"+ data.padEnd(25, '.') + " " + ano);
+                console.log(sal.padEnd(25, '.') + " R$" + salario.toFixed(2).replace(".",","));
+                console.log("Crescimento Salarial: -");
+                console.log(ipcaST.padEnd(25, '.') + " " + ipca.toFixed(2).replace(".",",") +" %");
+              };
      break
      
      default:
