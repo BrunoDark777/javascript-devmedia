@@ -91,11 +91,15 @@ switch(numero){
                 let data = "Ano: ";
                 let sal = "Salário mínimo: ";
                 let ipcaST = "Inflação: ";
+                let cres = "Crescimento Salarial: "
+
+                let diferenca = i > 0 ? salario - salarioMinimo[i - 1].salario : 0;
+                let crescimento = i > 0 ? (diferenca / salarioMinimo[i - 1].salario) * 100 : 0;
 
 
                 console.log("\n"+ data.padEnd(25, '.') + " " + ano);
                 console.log(sal.padEnd(25, '.') + " R$" + salario.toFixed(2).replace(".",","));
-                console.log("Crescimento Salarial: -");
+                console.log(cres.padEnd(25, '.') + " " + crescimento.toFixed(2).replace(".",",") + " %");
                 console.log(ipcaST.padEnd(25, '.') + " " + ipca.toFixed(2).replace(".",",") +" %");
               };
      break
