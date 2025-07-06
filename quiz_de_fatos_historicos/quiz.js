@@ -1,3 +1,5 @@
+import entradaDados from 'readline-sync';
+
 const questoes = [
   { id: 1, pergunta: 'Quando aconteceu o atentado as Torres Gêmeas?', resposta: '2001' },
   { id: 2, pergunta: 'Em que ano foi detectado o primeiro paciente com coronavírus?', resposta: '2019' },
@@ -31,6 +33,16 @@ const questoes = [
   { id: 30, pergunta: 'Em que ano o homem pisou na Lua pela primeira vez?', resposta: '1969' }
 ];
 
+let errado = 0;
+let certo = 0;
+
+console.log("----------- Quiz de Fatos Historicos ----------\n");
+
+console.log("Seja Bem-vindo jogador(a)!\n");
+let nome = entradaDados.question("Digite seu nome: ");
+
+console.log("\n");
+
 // Para o Bruno do futuro: Sempre que precisar embaralhar um array usar essa sintaxe!
 const questoesEmbaralhadas = questoes.sort(() => Math.random() - 0.5);
 
@@ -40,5 +52,48 @@ const questoesSelecionadas = questoesEmbaralhadas.slice(0, 10);
 // o método .forEach vai percorrer o novo array exibindo as perguntas.
 questoesSelecionadas.forEach((pergunta, index) => {
     console.log(`${index + 1}: ${pergunta.pergunta}`);
+
+    let resposta = entradaDados.question("Resposta: ");
+
+    if(resposta == pergunta.resposta){
+      console.log("Certa Resposta!!!😁 \n")
+    } else{
+      console.log("Resposta Errada!!!😢 \n")
+    }
+
+     if(resposta == pergunta.resposta){
+      certo++
+    } else{
+      errado++
+    }
+
 });
+
+   
+    if(certo == 10){
+      
+      console.log("Jogador(a): "+nome);
+      console.log("Você acertou "+certo+" perguntas.");
+      console.log("Parabéns você é muito bom!!! 👏👏👏");
+
+    }else if(certo >= 7 && certo < 10){
+      
+      console.log("Jogador(a): "+nome);
+      console.log("Você acertou "+certo+" perguntas e errou "+errado);
+      console.log("Muito bem!!! 👍");
+
+    }else if(certo >= 5 && certo < 7){
+      
+      console.log("Jogador(a): "+nome);
+      console.log("Você acertou "+certo+" perguntas e errou "+errado);
+      console.log("Precisa estudar mais! ✍");
+
+    } else{
+      
+      console.log("Jogador(a): "+nome);
+      console.log("Você acertou "+certo+" perguntas e errou "+errado);
+      console.log("Burro!!! 😭😭😭😭")
+    }
+
+ 
 
