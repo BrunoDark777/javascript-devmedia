@@ -1,10 +1,14 @@
+// Subcamada:
+import formatarIMC from "./formataIMC.js";
 
+// Camada de serviço.
 //Contexto do cálculo de IMC.
 
 // O contexto do cálculo de IMC é representado pela funçao calculaIMC, pois o único objetivo dela é esse.
 function calculaIMC(peso, altura){
     let imc = peso / (altura * altura);
-    return imc;
+    let imcFormatado = formatarIMC(imc);
+    return imcFormatado;
 }
 
 // A função retornaStatusIMC é utilizada para retornar o status do usúario com base no cálculo do IMC e por esse motivo ela está no contexto de cálculo IMC.

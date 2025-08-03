@@ -17,7 +17,7 @@ if(verificaPesoValido && verificaAlturaValida){
 let resultado = calculaIMC(peso, altura);
 let statusIMC = retornaStatusIMC(resultado)
 
-console.log("Seu IMC é "+resultado.toFixed(2)+" e você está "+statusIMC);
+console.log("Seu IMC é "+resultado+" e você está "+statusIMC);
 } else {
     console.log("Peso e altura devem ser maiores que zero");
 }
