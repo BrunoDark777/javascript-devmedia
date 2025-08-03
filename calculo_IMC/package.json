@@ -1,0 +1,10 @@
+{
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Um aplicativo para calcular IMC",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    }
+    
+}

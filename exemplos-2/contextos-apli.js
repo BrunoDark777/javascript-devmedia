@@ -23,7 +23,7 @@ function validaAltura(altura){
     return alturaValida;
 }
 
-//Contextto do cálculo de IMC.
+//Contexto do cálculo de IMC.
 
 // O contexto do cálculo de IMC é representado pela funçao calculaIMC, pois o único objetivo dela é esse.
 function calculaIMC(peso, altura){
@@ -54,8 +54,8 @@ function retornaStatusIMC(imc){
 let peso = 78;
 let altura = 1.72;
 
-let verificaPesoValido = pesoValido(peso);
-let verificaAlturaValida = alturaValida(altura);
+let verificaPesoValido = validaPeso(peso);
+let verificaAlturaValida = validaAltura(altura);
 
 if(verificaPesoValido && verificaAlturaValida){
     
