@@ -1,5 +1,5 @@
-import colecao_signos from "./dados/dados";
-import retorna_signo from "./funcoes/funcoes";
+import colecao_signos from "./dados/dados.js";
+import retorna_signo from "./funcoes/funcoes.js";
 
 let data_app = new Date();
 
