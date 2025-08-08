@@ -1,0 +1,10 @@
+{
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Um aplicativo que retorna uma série de acordo com o dia da semana. ",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    }
+    
+}
