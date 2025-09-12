@@ -1,34 +1,36 @@
-const chuva_de_meteoros = [
-{'Alfa Centaurídeos',	    inicio da chuva '01/28', fim da chuva '02/21', pico em 'Fev 8',   ascencao de 210,  declinacao de	-59,  velocidade da chuva	56, thz '6',        intensidade da chuva 'Média'},
-{'Gama Normídeos',	        inicio da chuva '02/25', fim da chuva '03/22', pico em 'Mar 14',  ascencao de 239,  declinacao de	-50,  velocidade da chuva	56, thz '6',        intensidade da chuva 'Média'
-{'Pi Pupídeos',	            inicio da chuva '04/15', fim da chuva '04/28', pico em 'Abr 23',  ascencao de 110,  declinacao de	-45,  velocidade da chuva	18, thz 'Variável', intensidade da chuva 'Irregular'
-{'Líridas',	                inicio da chuva '04/16', fim da chuva '04/25', pico em 'Abr 22',  ascencao de 271,  declinacao de	34,  velocidade da chuva	49, thz '18',       intensidade da chuva 'Forte com meteoros rápidos e persistentes'
-{'Eta Aquáridas',	        inicio da chuva '04/19', fim da chuva '05/28', pico em 'Mai 5',   ascencao de 338,  declinacao de	-1,  velocidade da chuva	66, thz '65',       intensidade da chuva 'Forte com meteoros muito rápidos e de grande comprimento'
-{'Eta Líridas',	            inicio da chuva '05/03', fim da chuva '05/14', pico em 'Mai 8',   ascencao de 287,  declinacao de	44,  velocidade da chuva	43, thz '3',        intensidade da chuva 'Fraca'
-{'Bootídeos de Junho',	    inicio da chuva '06/28', fim da chuva '06/28', pico em 'Jun 28',  ascencao de 224,  declinacao de	48,  velocidade da chuva	18, thz 'Variável', intensidade da chuva 'Irregular'
-{'Alfa Capricornídeos',      inicio da chuva '07/03', fim da chuva '08/15', pico em 'Jul 30',  ascencao de 307,  declinacao de	-10,  velocidade da chuva	23, thz '5',        intensidade da chuva 'Fraca'
-{'Delta Aquáridas do Sul',   inicio da chuva '07/12', fim da chuva '08/19', pico em 'Jul 28',  ascencao de 340,  declinacao de	-16,  velocidade da chuva	41, thz '16',       intensidade da chuva 'Forte com meteoros lentos e rasto comprido'
-'Piscis Austrinídeos',	    inicio da chuva '07/15', fim da chuva '08/10', pico em 'Jul 28',  ascencao de 341,  declinacao de	-30,  velocidade da chuva	35, thz '5',        intensidade da chuva 'Média'
-'Perseidas',	            inicio da chuva '07/17', fim da chuva '08/24', pico em 'Ago 12',  ascencao de 48,   declinacao de	58,  velocidade da chuva	59, thz '100',      intensidade da chuva 'Forte e muito rápidas'
-'Capa Cignídeos',           inicio da chuva '08/03', fim da chuva '08/25', pico em 'Ago 17',  ascencao de 286,  declinacao de	59,  velocidade da chuva	25, thz '3',        intensidade da chuva 'Fraca com velocidade da chuvas médias e brilhantes'
-'Alfa Aurigídeos',	        inicio da chuva '08/25', fim da chuva '09/28', pico em 'Set 1',   ascencao de 91,   declinacao de	39,  velocidade da chuva	66, thz '6',        intensidade da chuva 'Média com meteoros muito rápidos e persistentes'
-'Perseidas de Setembro',    inicio da chuva '09/05', fim da chuva '10/10', pico em 'Set 8',   ascencao de 48,   declinacao de	40,  velocidade da chuva	64, thz '5',        intensidade da chuva 'Média com meteoros rápidos e persistentes'
-'Táuridas do Sul',          inicio da chuva '09/10', fim da chuva '11/20', pico em 'Out 10',  ascencao de 32,   declinacao de	9,   velocidade da chuva	27, thz '5',        intensidade da chuva 'Fraca'
-'Delta Aurigídeos',         inicio da chuva '09/22', fim da chuva '10/23', pico em 'Out 10',  ascencao de 84,   declinacao de	44,  velocidade da chuva	64, thz '2',        intensidade da chuva 'Fraca'
-'Oriónidas',                inicio da chuva '10/02', fim da chuva '11/07', pico em 'Out 21',  ascencao de 95,   declinacao de	16,  velocidade da chuva	66, thz '25',       intensidade da chuva 'Forte com meteoros rápidos e persistentes'
-'Dracónidas',               inicio da chuva '10/06', fim da chuva '10/10', pico em 'Out 8',   ascencao de 262,  declinacao de	54,  velocidade da chuva	20, thz 'Variável', intensidade da chuva 'Irregular'
-'Épsilon Geminídeos',       inicio da chuva '10/14', fim da chuva '10/27', pico em 'Out 18',  ascencao de 102,  declinacao de	27,  velocidade da chuva	70, thz '3',        intensidade da chuva 'Fraca'
-'Leo Minorídeos',           inicio da chuva '10/21', fim da chuva '10/23', pico em 'Out 22',  ascencao de 162,  declinacao de	37,  velocidade da chuva	62, thz '2',        intensidade da chuva 'Fraca'
-'Táuridas do Norte',        inicio da chuva '11/01', fim da chuva '11/25', pico em 'Nov 12',  ascencao de 58,   declinacao de	22,  velocidade da chuva	29, thz '5',        intensidade da chuva 'Média com meteoros muito lentos mas brilhantes'
-'Leónidas',                 inicio da chuva '11/14', fim da chuva '11/21', pico em 'Nov 17',  ascencao de 152,  declinacao de	22,  velocidade da chuva	71, thz 'Variável', intensidade da chuva 'Irregular com meteoros muito rápidos, atingindo um pico em de 33 em 33 anos'
-'Alfa Monocerotídeos',      inicio da chuva '11/15', fim da chuva '11/25', pico em 'Nov 21',  ascencao de 117,  declinacao de	1,  velocidade da chuva	65, thz 'Variável', intensidade da chuva 'Irregular'
-'Monocerotídeos',           inicio da chuva '11/27', fim da chuva '12/17', pico em 'Dez 8',   ascencao de 100,  declinacao de	8,  velocidade da chuva	42, thz '2',        intensidade da chuva 'Fraca'
-'Fenícidas',	            inicio da chuva '11/28', fim da chuva '12/09', pico em 'Dez 6',   ascencao de 18,   declinacao de	-53,  velocidade da chuva	18, thz 'Variável', intensidade da chuva 'Irregular'
-'Quadrântidas',	            inicio da chuva '11/28', fim da chuva '01/12', pico em 'Jan 4',   ascencao de 230,  declinacao de	49,  velocidade da chuva	41, thz '120',      intensidade da chuva 'Forte com velocidade da chuvas médias'
-'Pupidas-Velidas',	        inicio da chuva '12/02', fim da chuva '12/16', pico em 'Dez 12',  ascencao de 123,  declinacao de	-45,  velocidade da chuva	40, thz '10',       intensidade da chuva 'Média'
-'Sigma Hidrídeos',          inicio da chuva '12/03', fim da chuva '12/15', pico em 'Dez 12',  ascencao de 127,  declinacao de	2,  velocidade da chuva	58, thz '3',        intensidade da chuva 'Fraca'
-'Leo Minorídeos de Dezembro',inicio da chuva '12/05', fim da chuva '02/04', pico em 'Dez 19',  ascencao de 161,  declinacao de	30,  velocidade da chuva	64, thz '5',        intensidade da chuva 'Média'
-'Gemínidas',	            inicio da chuva '12/07', fim da chuva '12/17', pico em 'Dez 14',  ascencao de 112,  declinacao de	33,  velocidade da chuva	35, thz '120',      intensidade da chuva 'Forte com velocidade da chuvas médias, meteoros brancos e numerosos'
-'Coma Berenicídeos',        inicio da chuva '12/12', fim da chuva '01/23', pico em 'Dez 20',  ascencao de 175,  declinacao de	18,  velocidade da chuva	65, thz '3',        intensidade da chuva 'Fraca'
-'Úrsidas',                  inicio da chuva '12/17', fim da chuva '12/26', pico em 'Dez 22',  ascencao de 217,  declinacao de	76,  velocidade da chuva	33, thz '10',       intensidade da chuva 'Média'
-]
+const colecaoChuvasDeMeteoros = [
+    { nome: 'Alfa Centaurídeos',	        inicio: '01/28', fim: '02/21', pico: 'Fev 8',   ascencao: 210,  declinacao:	-59,  velocidade:	56, thz: '6',        intensidade: 'Média'},
+    { nome: 'Gama Normídeos',	            inicio: '02/25', fim: '03/22', pico: 'Mar 14',  ascencao: 239,  declinacao:	-50,  velocidade:	56, thz: '6',        intensidade: 'Média'},
+    { nome: 'Pi Pupídeos',	                inicio: '04/15', fim: '04/28', pico: 'Abr 23',  ascencao: 110,  declinacao:	-45,  velocidade:	18, thz: 'Variável', intensidade: 'Irregular'},
+    { nome: 'Líridas',	                    inicio: '04/16', fim: '04/25', pico: 'Abr 22',  ascencao: 271,  declinacao:	34,  velocidade:	49, thz: '18',       intensidade: 'Forte com meteoros rápidos e persistentes'},
+    { nome: 'Eta Aquáridas',	            inicio: '04/19', fim: '05/28', pico: 'Mai 5',   ascencao: 338,  declinacao:	-1,  velocidade:	66, thz: '65',       intensidade: 'Forte com meteoros muito rápidos e de grande comprimento'},
+    { nome: 'Eta Líridas',	                inicio: '05/03', fim: '05/14', pico: 'Mai 8',   ascencao: 287,  declinacao:	44,  velocidade:	43, thz: '3',        intensidade: 'Fraca'},
+    { nome: 'Bootídeos de Junho',	        inicio: '06/28', fim: '06/28', pico: 'Jun 28',  ascencao: 224,  declinacao:	48,  velocidade:	18, thz: 'Variável', intensidade: 'Irregular'},
+    { nome: 'Alfa Capricornídeos',          inicio: '07/03', fim: '08/15', pico: 'Jul 30',  ascencao: 307,  declinacao:	-10,  velocidade:	23, thz: '5',        intensidade: 'Fraca'},
+    { nome: 'Delta Aquáridas do Sul',       inicio: '07/12', fim: '08/19', pico: 'Jul 28',  ascencao: 340,  declinacao:	-16,  velocidade:	41, thz: '16',       intensidade: 'Forte com meteoros lentos e rasto comprido'},
+    { nome: 'Piscis Austrinídeos',	        inicio: '07/15', fim: '08/10', pico: 'Jul 28',  ascencao: 341,  declinacao:	-30,  velocidade:	35, thz: '5',        intensidade: 'Média'},
+    { nome: 'Perseidas',	                inicio: '07/17', fim: '08/24', pico: 'Ago 12',  ascencao: 48,   declinacao:	58,  velocidade:	59, thz: '100',      intensidade: 'Forte e muito rápidas'},
+    { nome: 'Capa Cignídeos',               inicio: '08/03', fim: '08/25', pico: 'Ago 17',  ascencao: 286,  declinacao:	59,  velocidade:	25, thz: '3',        intensidade: 'Fraca com velocidades médias e brilhantes'},
+    { nome: 'Alfa Aurigídeos',	            inicio: '08/25', fim: '09/28', pico: 'Set 1',   ascencao: 91,   declinacao:	39,  velocidade:	66, thz: '6',        intensidade: 'Média com meteoros muito rápidos e persistentes'},
+    { nome: 'Perseidas de Setembro',        inicio: '09/05', fim: '10/10', pico: 'Set 8',   ascencao: 48,   declinacao:	40,  velocidade:	64, thz: '5',        intensidade: 'Média com meteoros rápidos e persistentes'},
+    { nome: 'Táuridas do Sul',              inicio: '09/10', fim: '11/20', pico: 'Out 10',  ascencao: 32,   declinacao:	9,   velocidade:	27, thz: '5',        intensidade: 'Fraca'},
+    { nome: 'Delta Aurigídeos',             inicio: '09/22', fim: '10/23', pico: 'Out 10',  ascencao: 84,   declinacao:	44,  velocidade:	64, thz: '2',        intensidade: 'Fraca'},
+    { nome: 'Oriónidas',                    inicio: '10/02', fim: '11/07', pico: 'Out 21',  ascencao: 95,   declinacao:	16,  velocidade:	66, thz: '25',       intensidade: 'Forte com meteoros rápidos e persistentes'},
+    { nome: 'Dracónidas',                   inicio: '10/06', fim: '10/10', pico: 'Out 8',   ascencao: 262,  declinacao:	54,  velocidade:	20, thz: 'Variável', intensidade: 'Irregular'},
+    { nome: 'Épsilon Geminídeos',           inicio: '10/14', fim: '10/27', pico: 'Out 18',  ascencao: 102,  declinacao:	27,  velocidade:	70, thz: '3',        intensidade: 'Fraca'},
+    { nome: 'Leo Minorídeos',               inicio: '10/21', fim: '10/23', pico: 'Out 22',  ascencao: 162,  declinacao:	37,  velocidade:	62, thz: '2',        intensidade: 'Fraca'},
+    { nome: 'Táuridas do Norte',            inicio: '11/01', fim: '11/25', pico: 'Nov 12',  ascencao: 58,   declinacao:	22,  velocidade:	29, thz: '5',        intensidade: 'Média com meteoros muito lentos mas brilhantes'},
+    { nome: 'Leónidas',                     inicio: '11/14', fim: '11/21', pico: 'Nov 17',  ascencao: 152,  declinacao:	22,  velocidade:	71, thz: 'Variável', intensidade: 'Irregular com meteoros muito rápidos, atingindo um pico de 33 em 33 anos'},
+    { nome: 'Alfa Monocerotídeos',          inicio: '11/15', fim: '11/25', pico: 'Nov 21',  ascencao: 117,  declinacao:	1,  velocidade:	65, thz: 'Variável', intensidade: 'Irregular'},
+    { nome: 'Monocerotídeos',               inicio: '11/27', fim: '12/17', pico: 'Dez 8',   ascencao: 100,  declinacao:	8,  velocidade:	42, thz: '2',        intensidade: 'Fraca'},
+    { nome: 'Fenícidas',	                inicio: '11/28', fim: '12/09', pico: 'Dez 6',   ascencao: 18,   declinacao:	-53,  velocidade:	18, thz: 'Variável', intensidade: 'Irregular'},
+    { nome: 'Quadrântidas',	                inicio: '11/28', fim: '01/12', pico: 'Jan 4',   ascencao: 230,  declinacao:	49,  velocidade:	41, thz: '120',      intensidade: 'Forte com velocidades médias'},
+    { nome: 'Pupidas-Velidas',	            inicio: '12/02', fim: '12/16', pico: 'Dez 12',  ascencao: 123,  declinacao:	-45,  velocidade:	40, thz: '10',       intensidade: 'Média'},
+    { nome: 'Sigma Hidrídeos',              inicio: '12/03', fim: '12/15', pico: 'Dez 12',  ascencao: 127,  declinacao:	2,  velocidade:	58, thz: '3',        intensidade: 'Fraca'},
+    { nome: 'Leo Minorídeos de Dezembro',   inicio: '12/05', fim: '02/04', pico: 'Dez 19',  ascencao: 161,  declinacao:	30,  velocidade:	64, thz: '5',        intensidade: 'Média'},
+    { nome: 'Gemínidas',	                inicio: '12/07', fim: '12/17', pico: 'Dez 14',  ascencao: 112,  declinacao:	33,  velocidade:	35, thz: '120',      intensidade: 'Forte com velocidades médias, meteoros brancos e numerosos'},
+    { nome: 'Coma Berenicídeos',            inicio: '12/12', fim: '01/23', pico: 'Dez 20',  ascencao: 175,  declinacao:	18,  velocidade:	65, thz: '3',        intensidade: 'Fraca'},
+    { nome: 'Úrsidas',                      inicio: '12/17', fim: '12/26', pico: 'Dez 22',  ascencao: 217,  declinacao:	76,  velocidade:	33, thz: '10',       intensidade: 'Média'},
+];
+
+export default colecaoChuvasDeMeteoros;
